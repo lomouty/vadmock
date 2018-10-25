@@ -1,0 +1,21 @@
+{
+    "name": "lomouty/mock",
+    "description": "Mock library for php",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lomouty",
+            "email": "lomouty@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lomouty\\Mock\\": "src/"
+        }
+    }
+}
