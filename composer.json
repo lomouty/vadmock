@@ -1,7 +1,7 @@
 {
     "name": "lomouty/mock",
     "description": "Mock library for php",
-    "type": "composer-plugin",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
