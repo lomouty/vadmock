@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the lomouty mock package.
+ * This file is part of the mock package.
  *
  * (c) lomouty <lomouty@gmail.com>
  *
@@ -9,14 +9,20 @@
  */
 namespace Lomouty\Mock;
 
+use Lomouty\Mock\Lib\Handler;
+
 class Mock {
 
-    public function __construct() {
+    /**
+     * @var \Lomouty\Mock\Lib\Handler
+     */
+    protected static $handler;
 
-    }
-
-    public static function mock(){
-        return 'init';
+    public static function mock($template = array()){
+        if (!(self::$handler instanceof Handler)) {
+            self::$handler = new Handler();
+        }
+        return self::$handler->gen($template);
     }
 
 }
